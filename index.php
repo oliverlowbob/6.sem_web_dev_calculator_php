@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
     </style>
-    <!-- <script src="js/script.js" defer></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script> -->
 </head>
 <body>
     <header id="main">
@@ -36,32 +34,32 @@
                 <p><?php echo $GLOBALS['finalAmountOut'] ?></p>
             </div>
         </div>
-        <div id="temperature">
-            <h2>Temperature Converter</h2>
+        <h2>Temperature Converter</h2>
+        <form method="post">
             <div>
                 <span class="field">Convert:</span></br>
-                <input type="number" value=0 id="inpTemp">       
+                <input type="number" value=0 name="inpTemp" id="inpTemp">       
             </div>
             <div>
                 <label>From: </label>
-                <select id="tempSelectFrom" name="temperature">
+                <select id="tempSelectFrom" name="tempSelectFrom">
                     <option value="fahrenheitFrom">Fahrenheit</option>
                     <option value="celsiusFrom">Celsius</option>
                     <option value="kelvinFrom">Kelvin</option>
                   </select>
                   <br>
                   <label>To: </label>
-                  <select id="tempSelectTo" name="temperature">
+                  <select id="tempSelectTo" name="tempSelectTo">
                       <option value="fahrenheitTo">Fahrenheit</option>
                       <option value="celsiusTo">Celsius</option>
                       <option value="kelvinTo">Kelvin</option>
                     </select>
             </div>
             <div>
-                <button id="btnCalculateTemp">Calculate</button>
+                <input type="submit" id="btnCalculateTemp" name="btnCalculateTemp" value="Calculate" /><br>
             </div>
-            <div id="outTemp"></div>
-        </div>
+            <p><?php echo $GLOBALS['outTemp'] ?></p>
+        </form>
     </main>
     <footer>
         &copy; 2021 Oliver Dehnfjeld
