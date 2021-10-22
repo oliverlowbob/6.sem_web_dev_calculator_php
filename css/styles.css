@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+
+:root {
+    --colorTextPrimary: black;
+    --colorTextSecondary: floralwhite;
+
+    --colorPrimary: #20408A;
+    --colorSecondary: #A9ABAE;
+    --colorTertiary: whitesmoke;
+
+    --fontMain: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: var(--fontMain);
+}
+
+#temperature{
+    padding: 1rem;
+}
+
+#calculator{
+    padding: 1rem;
+}
+
+.temperatureSelect{
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.25rem;
+    font-family: "sans-serif";
+    font-size: 1rem;
+}
+
+header#main {
+    padding: 0.5rem 0 0.5rem 2rem;
+    color: var(--colorTextSecondary);
+    background-color: var(--colorPrimary);
+}
+
+main {
+    padding: 0.5rem 1rem;
+    line-height: 1.4rem;
+}
+
+@media (min-width: 500px) {
+    section#texts > div {
+        flex: 1 1 450px;
+    }
+}
+@media (min-width: 750px) {
+    section#texts > div {
+        flex: 1 1 0;
+    }
+}
+
+button, select, input[type=submit] {
+    margin-top: 0.3rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.25rem;
+    font-family: var(--fontMain);
+    font-size: 1rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.25rem 0 0.25rem 0;
+    color: var(--colorTextSecondary);
+    background-color: var(--colorPrimary);
+    text-align: center;
+}
